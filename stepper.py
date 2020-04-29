@@ -8,14 +8,15 @@ import RPi.GPIO as GPIO
 # instead of physical pin numbers
 GPIO.setmode(GPIO.BCM)
 
+# http://www.scraptopower.co.uk/Raspberry-Pi/how-to-connect-stepper-motors-a-raspberry-pi
 # Define GPIO signals to use
 # Physical pins 11,15,16,18
 # GPIO17,GPIO22,GPIO23,GPIO24
-StepPins = [17,22,23,24]
+StepPins = [5,6,13,26]
 
 # Set all pins as output
 for pin in StepPins:
-  print "Setup pins"
+  print("Setup pins")
   GPIO.setup(pin,GPIO.OUT)
   GPIO.output(pin, False)
 
